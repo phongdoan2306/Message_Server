@@ -9,7 +9,7 @@ io.on('connection', (socket) => {
   });
    
   socket.on('send-message', (message) => {
-    io.emit('message', {msg: message.text, sentby: message.sentby, createdAt: new Date()});    
+    io.emit('message', {msg: message.text, sentby: message.sentby, isImaged: message.isImaged ,createdAt: new Date()});    
   });
 });
  
